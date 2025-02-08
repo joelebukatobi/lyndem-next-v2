@@ -1,0 +1,86 @@
+.blog {
+  &-landing {
+    @apply my-[16rem] h-full;
+    //
+    & header {
+      //
+      @apply mb-[3.2rem];
+
+      //
+      & .caption {
+        @apply mb-0;
+        //
+        & h3 {
+          @apply mb-0;
+        }
+      }
+      //
+      & ul {
+        @apply flex items-end gap-x-[1.6rem];
+        & li {
+          @apply flex items-center justify-center cursor-pointer;
+
+          & button {
+            @apply border-none h-[5.6rem] w-[5.6rem] bg-gray-300 rounded-[100%];
+            & svg {
+              @apply h-[2.4rem] w-[2.4rem] stroke-blue-600 stroke-[.24rem] hover:stroke-white;
+            }
+          }
+        }
+      }
+    }
+
+    &-card {
+      //
+      @apply w-full shadow-card bg-white rounded-[1.6rem];
+      //
+      &--image {
+        @apply relative w-full h-[40rem] rounded-[1.6rem] overflow-hidden;
+        & img {
+          @apply w-full h-full;
+        }
+      }
+      &--details {
+        @apply flex gap-x-[5.6rem] px-[3.2rem] pt-[3.2rem];
+      }
+
+      &--author,
+      &--date {
+        @apply flex items-center gap-x-[.8rem];
+        & p {
+          @apply text-[1.4rem];
+        }
+        //
+        & svg {
+          @apply h-[2.4rem] w-[2.4rem] fill-blue-600;
+        }
+      }
+
+      & figcaption {
+        @apply px-[3.2rem] pt-[2.4rem] pb-[3.2rem];
+
+        & h5 {
+          @apply font-serif font-bold text-[2rem] mb-[1.6rem];
+        }
+
+        & p {
+          @apply text-[1.4rem];
+          //
+          & a {
+            @apply text-blue-600 font-semibold;
+          }
+        }
+      }
+    }
+  }
+
+  & .hs {
+    &-carousel {
+      @apply relative overflow-hidden w-full h-full pb-[8rem];
+
+      &-body {
+        @apply flex flex-nowrap gap-x-[2.4rem] transition-transform duration-700;
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+.footer {
+  @apply bg-transparent pt-[10.6rem];
+
+  &-logo {
+    @apply h-[12rem] w-[12rem];
+  }
+
+  &-links,
+  &-contact,
+  &-address,
+  &-newsletter {
+    & h5 {
+      @apply font-serif text-[1.6rem] text-blue-800 font-bold mb-[2.4rem];
+    }
+
+    & ul {
+      @apply space-y-[1.6rem];
+      & li {
+        & a {
+          @apply text-[1.6rem] text-blue-800 mb-[1.6rem];
+        }
+      }
+    }
+  }
+
+  &-newsletter {
+    @apply w-[31.40%];
+
+    & h5 {
+      &:last-of-type {
+        @apply my-[1.6rem];
+      }
+    }
+
+    & form {
+      & p {
+        @apply text-blue-800 text-[1.6rem] mt-[.8rem];
+      }
+    }
+
+    & ul {
+      @apply flex gap-x-[1.6rem] space-y-[unset];
+      & li {
+        @apply h-[3.2rem] w-[3.2rem] bg-blue-800 flex items-center justify-center rounded-[100%];
+        & svg {
+          @apply fill-white;
+        }
+      }
+    }
+  }
+
+  &-address {
+    @apply w-[25%];
+
+    & div {
+      @apply flex items-start gap-x-[.8rem] mb-[1.6rem];
+
+      & svg {
+        @apply h-[2.4rem] w-[2.4rem] stroke-blue-800;
+      }
+      //
+      & p {
+        @apply text-blue-800 text-[1.6rem];
+      }
+      //
+      & address {
+        @apply text-[1.6rem] text-blue-800 not-italic;
+      }
+      //
+      & p,
+      & address {
+        width: calc(100% - 2.4rem);
+      }
+    }
+  }
+
+  &-copyright {
+    @apply text-blue-800 text-center w-full text-[1.6rem] mt-[8rem] mb-[8rem];
+  }
+}

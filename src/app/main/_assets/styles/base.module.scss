@@ -1,0 +1,28 @@
+// Color Variables //
+// ---------------------------------------------------------------------//
+
+// Font Variables //
+// ---------------------------------------------------------------------//
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+// Body
+body::-webkit-scrollbar {
+  width: 0.5rem;
+  &:hover {
+    width: 1rem;
+  }
+  &-track {
+    @apply bg-gray-500;
+  }
+  &-thumb {
+    @apply bg-gray-500/[0.05];
+    &:hover {
+      @apply bg-gray-500/[0.2];
+    }
+  }
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //10px/16px = 62.5% 1rem
+}

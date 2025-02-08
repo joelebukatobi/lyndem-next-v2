@@ -1,0 +1,79 @@
+// Input Group
+div[aria-label='input-group'] {
+  & label {
+    @apply capitalize mb-[.4rem];
+  }
+  //
+  & div {
+    //
+    @apply relative flex justify-between;
+    & input {
+      @apply w-full;
+      //
+    }
+    //
+    & button,
+    & button[type='button'] {
+      @apply rounded-[.4rem] bg-[unset] hover:bg-transparent border-transparent p-0 border-2 absolute inset-y-0 end-[1.6rem] grid place-content-center w-[unset];
+      //
+    }
+    //
+    & svg {
+      @apply h-[2rem] w-[2rem] stroke-gray-400 hover:stroke-2 hover:stroke-blue-600;
+    }
+  }
+}
+// Button Group
+div[aria-label='button-group'] {
+  @apply flex space-x-[1.6rem];
+}
+
+// Form Group
+form[aria-label='form-group'] {
+  @apply flex space-x-[1.6rem];
+}
+
+// Caption
+.caption {
+  @apply flex flex-col items-start mb-[1.6rem];
+  //
+  & div {
+    @apply flex items-center gap-x-[1.6rem] mb-[1.6rem];
+    //
+    & p {
+      @apply text-black text-[1.8rem] font-semibold w-full;
+    }
+    //
+    & hr {
+      @apply border-2 border-orange-600 w-[6.4rem];
+    }
+  }
+  //
+  & h3 {
+    @apply text-[4.8rem] mb-[3.2rem] w-full font-serif font-bold;
+  }
+
+  & p {
+    @apply text-[2rem] text-black;
+  }
+
+  & button {
+    @apply w-[unset] mt-[3.2rem] px-[3.2rem];
+  }
+}
+
+// Section
+.section {
+  @apply mt-[16rem] mb-[16rem] flex justify-between items-center gap-x-[8.6rem];
+  &-text {
+    width: calc(65% - 4.3rem);
+  }
+
+  &-media {
+    width: calc(50% - 4.3rem);
+    //
+    & img {
+      @apply w-full;
+    }
+  }
+}

@@ -1,0 +1,117 @@
+.landing {
+  @apply relative w-full;
+  & .navbar {
+    @apply bg-transparent;
+  }
+
+  //
+  &-header {
+    @apply relative w-full h-[100vh] overflow-hidden;
+    //
+    &-image {
+      @apply absolute top-0 left-0 w-full z-[-1];
+      //
+      & img {
+        @apply w-full h-full;
+
+        &:last-of-type {
+          @apply hidden;
+        }
+      }
+    }
+
+    //
+    &-content {
+      @apply h-full mt-[-10.6rem] flex flex-col justify-center items-center text-center;
+      //
+      & h1 {
+        @apply text-[7.2rem] font-bold font-serif text-white;
+      }
+      //
+      & h4 {
+        @apply text-[2.4rem] font-normal text-white mt-[1.6rem] w-[30%] mb-[2.4rem];
+      }
+
+      //
+      & ul {
+        @apply flex gap-x-[1.6rem] mt-[4rem];
+
+        & li {
+          &:first-of-type {
+            & button {
+              @apply text-[1.8rem] font-medium cursor-pointer text-black bg-white;
+            }
+          }
+          //
+          &:last-of-type {
+            & button {
+              @apply bg-transparent border-none text-white text-[1.8rem] font-medium cursor-pointer;
+
+              & svg {
+                @apply w-[2.4rem] h-[2.4rem];
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //
+    & .navbar {
+      @apply bg-transparent;
+    }
+  }
+
+  & .footer {
+    @apply bg-blue-600;
+
+    &-links,
+    &-contact,
+    &-address,
+    &-newsletter {
+      & h5 {
+        @apply text-white;
+      }
+
+      & ul {
+        & li {
+          & a {
+            @apply text-white;
+          }
+        }
+      }
+    }
+
+    &-address {
+      & div {
+        & p,
+        & address {
+          @apply text-white;
+        }
+        & svg {
+          @apply stroke-white;
+        }
+      }
+    }
+
+    &-newsletter {
+      & form {
+        & p {
+          @apply text-white;
+        }
+      }
+      & ul {
+        & li {
+          @apply bg-white;
+          & svg {
+            @apply fill-blue-600;
+          }
+        }
+      }
+    }
+
+    &-copyright {
+      @apply text-white;
+    }
+  }
+}

@@ -1,0 +1,424 @@
+// Grid
+//
+.container {
+  @media (max-width: 768px) {
+    @apply px-[5.6rem];
+  }
+}
+//
+.row {
+  @media (min-width: 768px) and (max-width: 1024px) {
+    @apply flex-wrap;
+  }
+  @media (min-width: 1024px) {
+    @apply flex-nowrap;
+  }
+}
+
+// Atoms
+/*-----------------------------------*/
+
+// Molecules
+/*-----------------------------------*/
+// Captions
+.caption {
+  @media (max-width: 768px) {
+    & div {
+      & p {
+        @apply text-[1.6rem];
+      }
+    }
+    & h3 {
+      @apply text-[4.8rem];
+    }
+
+    & p {
+      @apply text-[2rem];
+    }
+
+    & button {
+      @apply hidden;
+    }
+  }
+}
+
+// Sections
+.section {
+  @media (max-width: 768px) {
+    @apply flex-col;
+
+    &-text {
+      @apply w-full;
+    }
+
+    &-media {
+      @apply w-full mt-[6.4rem];
+    }
+  }
+}
+
+// Testimonials
+.testimonials {
+  @media (max-width: 768px) {
+    & .caption {
+      @apply w-full;
+    }
+
+    & .hs {
+      &-carousel {
+        @apply w-full mt-[2rem] mb-[4rem];
+
+        &-pagination {
+          @apply absolute bottom-0;
+        }
+      }
+    }
+  }
+}
+
+// What We Do
+.wwd {
+  //
+  @media (min-width: 768px) and (max-width: 1024px) {
+    & .caption {
+      & h3 {
+        @apply w-full;
+      }
+    }
+    & .row {
+      @apply w-full  gap-x-[1.6rem] gap-y-[3.2rem];
+    }
+    //
+    &-card {
+      width: calc(50% - 0.8rem);
+      @apply p-0 justify-center;
+    }
+    //
+    &-image {
+      @apply relative w-full;
+      & img {
+        @apply w-full h-full;
+      }
+    }
+    //
+    &-content {
+      @apply absolute flex flex-col justify-center p-[1.6rem];
+
+      & h4 {
+        @apply text-[2.4rem] mb-[.8rem] text-white;
+      }
+
+      & p {
+        @apply text-[2rem] mb-[1.6rem] text-white;
+      }
+
+      & button {
+        @apply hidden;
+      }
+    }
+  }
+  //
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    &-card {
+      @apply p-[2.4rem];
+    }
+
+    //
+    &-content {
+      & h4 {
+        @apply mb-[.8rem];
+      }
+
+      //
+      & p {
+        @apply mb-[2.4rem];
+      }
+
+      //
+      & button {
+        @apply text-[1.4rem] h-[4rem];
+      }
+    }
+  }
+}
+
+// Organisms
+/*-----------------------------------*/
+// Navbar
+.navbar {
+  @media (max-width: 768px) {
+  }
+}
+// Footer
+.footer {
+  @media (max-width: 768px) {
+    & .row {
+      @apply gap-y-[6.4rem];
+    }
+    //
+    &-logo {
+      @apply h-[24rem] w-[24rem];
+
+      & svg {
+        @apply h-[24rem] w-[24rem];
+      }
+    }
+    //
+    &-links,
+    &-contact,
+    &-address,
+    &-newsletter {
+      @apply w-full;
+      //
+      & h5 {
+        @apply text-[2.4rem];
+      }
+
+      & ul {
+        & li {
+          & a {
+            @apply text-[2rem];
+          }
+        }
+      }
+    }
+
+    &-newsletter {
+      @media (max-width: 768px) {
+        & form {
+          & p {
+            @apply text-[2rem];
+          }
+        }
+      }
+    }
+
+    //
+    &-address {
+      @apply space-y-[4rem];
+      //
+      & div {
+        //
+        & p,
+        & address {
+          @apply text-[2rem];
+        }
+      }
+    }
+
+    &-copyright {
+      @apply text-[2rem] text-left;
+    }
+  }
+}
+
+// Pages
+/*-----------------------------------*/
+// Landing Page and Components
+.landing {
+  @media (min-width: 768px) and (max-width: 1024px) {
+    &-header {
+      &-image {
+        & img {
+          &:first-of-type {
+            @apply hidden;
+          }
+
+          &:last-of-type {
+            @apply block;
+          }
+        }
+      }
+
+      &-content {
+        @apply mt-0 px-[5.6rem] pb-[8rem];
+
+        & h1 {
+          @apply text-[6.4rem];
+        }
+
+        & h4 {
+          @apply text-[2.4rem] mb-[1.6rem] w-4/6;
+        }
+
+        & ul {
+          @apply mt-[1.6rem];
+        }
+      }
+
+      & .navbar {
+        &-list {
+          & ul {
+            background: rgba(255, 255, 255, 0.1);
+            /* Apply the blur effect */
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(100px); /* For Safari compatibility */
+          }
+        }
+
+        &-menu {
+          & button {
+            @apply border-none hover:border-none;
+          }
+        }
+      }
+    }
+  }
+
+  //
+  @media (min-width: 1024px) and (max-width: 1280px) {
+    &-header {
+      @apply h-[75vh];
+      //
+      &-content {
+        & h4 {
+          @apply w-[75%];
+        }
+      }
+
+      //
+
+      &-image {
+        & img {
+          &:first-of-type {
+            @apply block;
+          }
+
+          &:last-of-type {
+            @apply hidden;
+          }
+        }
+      }
+    }
+    //
+  }
+}
+
+// About Us Page
+.about {
+  @media (max-width: 768px) {
+    &-header {
+      @apply mb-[40rem];
+      //
+      &-main {
+        @apply px-[5.6rem] pt-[4rem];
+        //
+        & .caption {
+          @apply relative top-[unset] left-[unset] w-full px-0;
+        }
+      }
+
+      &-text {
+        @apply relative right-[unset] top-[unset];
+      }
+
+      &-image {
+        @apply relative top-[unset] left-[unset] w-full h-[unset] mt-[8rem] overflow-hidden;
+
+        & img {
+          @apply w-full;
+        }
+      }
+    }
+  }
+}
+
+// Settigns Page
+.services {
+  @media (max-width: 768px) {
+    &-header {
+      @apply mb-[48rem];
+      //
+      & .caption {
+        @apply pt-[8rem] mb-[4rem] relative  top-[unset] left-[unset];
+      }
+
+      &-image {
+        @apply relative top-[unset] left-[unset];
+      }
+    }
+
+    &-section {
+      & .row {
+        @apply flex-col;
+      }
+
+      &-text,
+      &-image {
+        @apply w-full;
+      }
+
+      &-image {
+        @apply mb-[4rem];
+
+        & img {
+          @apply w-full;
+        }
+      }
+    }
+  }
+}
+
+// Contact Us
+.contact {
+  @media (max-width: 768px) {
+    &-header {
+      //
+      & .caption {
+        @apply w-full;
+      }
+    }
+
+    &-form {
+      @apply w-full;
+
+      & div[aria-label='form-group'] {
+        @apply space-y-[1.6rem];
+      }
+    }
+  }
+}
+
+// Blog Page and Components
+.blog {
+  @media (max-width: 768px) {
+    &-landing {
+      & header {
+        & ul {
+          @apply mt-[2.4rem];
+        }
+      }
+      &-card {
+        @apply w-full;
+
+        &--author,
+        &--date {
+          @apply flex items-center gap-x-[.8rem];
+          & p {
+            @apply text-[1.6rem];
+          }
+          //
+          & svg {
+            // @apply;
+          }
+        }
+
+        & figcaption {
+          & h5 {
+            @apply text-[2.4rem];
+          }
+
+          & p {
+            @apply text-[2rem];
+          }
+        }
+      }
+
+      & .hs-carousel {
+        &-body {
+          @apply gap-x-[0] mx-auto;
+        }
+      }
+    }
+  }
+}

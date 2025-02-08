@@ -1,0 +1,37 @@
+//
+.wwd {
+  @apply mt-[18rem] mb-[36rem];
+
+  //
+  & h3 {
+    @apply font-serif font-bold text-[4.8rem] w-[70%] mb-[4rem];
+  }
+
+  //
+  & .row {
+    @apply gap-x-[3.2rem];
+  }
+  //
+  &-card {
+    @apply relative px-[4.8rem] pt-[8rem] pb-[4.8rem] flex flex-col rounded-[1.6rem];
+    width: calc(33.3333% - 1.6rem);
+  }
+
+  &-image {
+    @apply absolute top-0 left-0 w-full h-full z-[-1];
+  }
+
+  &-content {
+    & h4 {
+      @apply text-[2.8rem] font-bold mb-[1.6rem] text-white;
+    }
+
+    & p {
+      @apply text-[1.6rem]  mb-[4rem] text-white;
+    }
+
+    & button {
+      @apply bg-white text-black w-[unset] px-[3.2rem];
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@use 'sass:meta';
+// Tailwind
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Main
+@include meta.load-css('base.module');
+@include meta.load-css('typography.module');
+
+// Atomic
+@include meta.load-css('atoms.module');
+@include meta.load-css('molecules.module');
+@include meta.load-css('organisms.module');
+
+// Pages
+@include meta.load-css('index.module');
+@include meta.load-css('about.us.module');
+@include meta.load-css('services.module');
+@include meta.load-css('contact.us.module');
+@include meta.load-css('games.module');
+@include meta.load-css('blog.module');
+
+// Mobile
+@include meta.load-css('mobile.module');

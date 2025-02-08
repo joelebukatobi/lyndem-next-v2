@@ -1,0 +1,44 @@
+.about {
+  &-header {
+    @apply h-[72rem] bg-blue-800 relative  mb-[48rem];
+    //
+    &-main {
+      @apply relative text-white h-full;
+
+      //
+      & .caption {
+        @apply absolute left-[3.2rem] 2xl:left-0 top-[15.4rem] w-[38.73%];
+        //
+        & div {
+          & p {
+            @apply text-white;
+          }
+        }
+      }
+    }
+
+    &-image {
+      @apply absolute top-[48.6rem] border-[1rem] h-[48rem] overflow-hidden lg:left-[3.2rem] lg:right-[3.2rem] 2xl:left-0 2xl:right-0 border-white rounded-[1.6rem] shadow-card;
+
+      & img {
+        @apply w-full;
+      }
+    }
+    //
+    &-text {
+      @apply absolute right-[3.2rem] 2xl:right-0 top-[19.8rem] lg:w-[50%] 2xl:w-[56.09%];
+      //
+      & p {
+        @apply text-[2rem] leading-[150%];
+      }
+    }
+  }
+
+  &-history {
+    @apply space-y-[4rem] mb-[16rem];
+
+    & p {
+      @apply text-[2rem];
+    }
+  }
+}

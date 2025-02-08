@@ -1,0 +1,11 @@
+.container-fluid {
+  @apply w-full mx-auto relative;
+}
+
+.container {
+  @apply max-w-[129.6rem] w-full mx-auto px-[3.2rem] 2xl:px-0 relative;
+}
+
+.row {
+  @apply w-full flex justify-between;
+}

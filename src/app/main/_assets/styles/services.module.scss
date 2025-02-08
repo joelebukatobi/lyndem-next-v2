@@ -1,0 +1,86 @@
+.services {
+  &-header {
+    @apply h-[72rem] bg-blue-800 relative  mb-[24rem];
+    //
+    &-main {
+      @apply h-full  relative text-white;
+
+      //
+      & .caption {
+        @apply absolute lg:left-[3.2rem] 2xl:left-0 top-[17.4rem] lg:w-[40%] xl:w-[40%];
+        //
+        & div {
+          & p {
+            @apply text-white;
+          }
+        }
+
+        & p {
+          @apply text-white;
+        }
+      }
+    }
+
+    &-image {
+      @apply absolute lg:right-[3.2rem] 2xl:right-0 lg:w-[40%] xl:w-[49.07%] z-[1] border-[1rem] top-[21.8rem] overflow-hidden border-white rounded-[1.6rem] shadow-card;
+    }
+  }
+
+  &-section {
+    @apply my-[16rem];
+
+    &-image {
+      @apply w-[37%;];
+    }
+
+    &:first-of-type { 
+      & p { 
+        &:first-child {
+          @apply mb-[2.4rem];
+        }
+
+        &:nth-of-type(2) {
+          @apply mb-[1.6rem] font-semibold underline; 
+        }
+
+        &:last-of-type {
+          @apply mt-[2.4rem];
+        }
+      }
+      // 
+      & ul { 
+        @apply list-disc list-inside ml-[1.6rem];
+      
+        & li { 
+          @apply text-[2rem] mb-[.8rem];
+
+          & i { 
+      @apply font-semibold
+          }
+
+          & ul { 
+            @apply ml-[1.6rem]
+          }
+        }
+      }
+    }
+
+
+    &:nth-of-type(2),
+    &:nth-of-type(3) {
+      & p { 
+        &:not(:last-of-type) {
+          @apply mb-[3.2rem];
+        }
+      }
+    }
+
+    &-text {
+      @apply w-[57.40%];
+
+      & p { 
+        @apply text-[2rem];
+      }
+    }
+  }
+}

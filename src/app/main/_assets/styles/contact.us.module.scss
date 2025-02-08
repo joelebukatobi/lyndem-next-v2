@@ -1,0 +1,40 @@
+.contact {
+  &-header {
+    @apply h-[72rem] bg-blue-800 relative mb-[8rem];
+    //
+    &-main {
+      @apply flex items-center h-full relative text-white;
+
+      //
+      & .caption {
+        @apply w-[65.66%] mt-[-10.6rem];
+        //
+        & div {
+          & p {
+            @apply text-white;
+          }
+        }
+
+        & p {
+          @apply text-white;
+        }
+      }
+    }
+  }
+
+  &-form {
+    @apply lg:w-[65%] xl:w-[60%] space-y-[2.4rem] mb-[16rem];
+
+    & div[aria-label='form-group'] {
+      & div[aria-label='textarea-group'] {
+        & textarea {
+          @apply h-[20rem];
+        }
+      }
+    }
+
+    & button {
+      @apply w-[unset] h-[5.6rem] px-[3.2rem];
+    }
+  }
+}
