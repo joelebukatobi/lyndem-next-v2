@@ -1,15 +1,15 @@
 'use client';
 
 // import * as Form from '@radix-ui/react-form';
-import { Button } from '@/admin/_components/atoms/Button';
-import { InputGroup } from '@/admin/_components/molecules/InputGroup';
-import { EyeSlashIcon } from '@heroicons/react/24/outline';
+// import { Button } from '@/admin/_components/atoms/Button';
+// import { InputGroup } from '@/admin/_components/molecules/InputGroup';
+// import { EyeSlashIcon } from '@heroicons/react/24/outline';
 
 //
 export default function Login() {
   return (
     <div className="admin">
-      <div className="admin_login">
+      {/* <div className="admin_login">
         <section>
           <main>
             <header>
@@ -113,14 +113,12 @@ export default function Login() {
                     Sign Up
                   </a>
                 </p>
-                {/* <Form.Submit asChild> */}
                 <Button>Login</Button>
-                {/* </Form.Submit> */}
               </div>
             </form>
           </main>
         </section>
-      </div>
+      </div> */}
     </div>
   );
 }
