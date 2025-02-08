@@ -22,9 +22,9 @@ export const ServicesHeader = () => {
             </div>
             <h3>Discover the unique blend of fun and learning,</h3>
             <p>
-              through our curated offerings. We provide enriching experiences for kids that spark creativity & encourage
+              {`   through our curated offerings. We provide enriching experiences for kids that spark creativity & encourage
               social interaction. Explore our services below to find the perfect fit for your child's needs and
-              interests.
+              interests.`}
             </p>
           </div>
           <div className="services-header-image">
