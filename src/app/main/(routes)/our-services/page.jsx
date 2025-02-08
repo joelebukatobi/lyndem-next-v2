@@ -19,7 +19,7 @@ export default function OurServicesPage() {
         </div>
         <div className="row">
           <div className="services-section-image">
-            <Image src={EduGaming} height={EduGaming.height} width={EduGaming.width} alt="" />
+            <Image src={EduGaming} height={EduGaming.height} width={EduGaming.width} alt="desc" />
           </div>
           <div className="services-section-text">
             <p>
@@ -64,7 +64,7 @@ export default function OurServicesPage() {
         </div>
         <div className="row">
           <div className="services-section-image">
-            <Image src={GameSchooling} height={GameSchooling.height} width={GameSchooling.width} />
+            <Image src={GameSchooling} height={GameSchooling.height} width={GameSchooling.width} alt="desc" />
           </div>
           <div className="services-section-text">
             <p>
@@ -96,7 +96,7 @@ export default function OurServicesPage() {
         </div>
         <div className="row">
           <div className="services-section-image">
-            <Image src={PlayDates} height={PlayDates.height} width={PlayDates.width} />
+            <Image src={PlayDates} height={PlayDates.height} width={PlayDates.width} alt="desc" />
           </div>
           <div className="services-section-text">
             <p>

@@ -33,7 +33,7 @@ export const AboutHeader = () => {
             </p>
           </div>
           <div className="about-header-image">
-            <Image src={BlogImageOne} height={BlogImageOne.height} width={BlogImageOne.width} />
+            <Image src={BlogImageOne} height={BlogImageOne.height} width={BlogImageOne.width} alt="desc" />
           </div>
         </div>
       </div>

@@ -28,7 +28,12 @@ export const ServicesHeader = () => {
             </p>
           </div>
           <div className="services-header-image">
-            <Image src={ServicesHeaderImage} height={ServicesHeaderImage.height} width={ServicesHeaderImage.width} />
+            <Image
+              src={ServicesHeaderImage}
+              height={ServicesHeaderImage.height}
+              width={ServicesHeaderImage.width}
+              alt="desc"
+            />
           </div>
         </div>
       </div>

@@ -62,7 +62,7 @@ export default function Home() {
         <div className="row">
           <div className="wwd-card">
             <div className="wwd-image">
-              <Image src={EduGamingCafe} />
+              <Image src={EduGamingCafe} alt="desc" />
             </div>
             <div className="wwd-content">
               <h4>EduGaming Cafe</h4>
@@ -75,20 +75,21 @@ export default function Home() {
           </div>
           <div className="wwd-card">
             <div className="wwd-image">
-              <Image src={GameSchooling} />
+              <Image src={GameSchooling} alt="desc" />
             </div>
             <div className="wwd-content">
               <h4>Gaming School</h4>
               <p>
-                One of our services on offer is Game Schooling which incorporates games into school lessons. We're open
+                {`One of our services on offer is Game Schooling which incorporates games into school lessons. We're open
                 to partnering with schools and organizations
+              `}
               </p>
               <Button>Learn More</Button>
             </div>
           </div>
           <div className="wwd-card">
             <div className="wwd-image">
-              <Image src={PlayDates} />
+              <Image src={PlayDates} alt="desc" />
             </div>
             <div className="wwd-content">
               <h4>Play Dates</h4>
