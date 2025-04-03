@@ -1,13 +1,13 @@
 .contact {
   &-header {
-    @apply h-[72rem] bg-blue-800 relative mb-[8rem];
+    @apply h-[64rem] bg-blue-800 relative mb-[8rem];
     //
     &-main {
       @apply flex items-center h-full relative text-white;
 
       //
       & .caption {
-        @apply w-[65.66%] mt-[-10.6rem];
+        @apply w-[65.66%];
         //
         & div {
           & p {

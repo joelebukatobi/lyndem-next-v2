@@ -1,14 +1,45 @@
+// Link
+import Image from 'next/image';
+
 // Components
+import { Header } from '@/main/_components/organisms/Header';
 import { SectionContent } from '@/main/_components/organisms/SectionContent';
 import { SectionMedia } from '@/main/_components/molecules/SectionMedia';
 import { SectionText } from '@/main/_components/molecules/SectionText';
 
 // Image
 import LandingMissionImage from '@/main/_assets/images/landing-mission-image.png';
+import BlogImageOne from '@/main/_assets/images/blog-image-one.png';
 
 export default function About() {
   return (
     <div className="about">
+      <Header className="about">
+        <div className="about-header">
+          <div className="container about-header-main">
+            <div className="caption">
+              <div>
+                <p>About Us</p>
+                <hr />
+              </div>
+              <h3>We are an interactive educational establishment. </h3>
+            </div>
+            <div className="about-header-text">
+              <p>
+                <strong>
+                  Lyndem Educational Games Cafe is a child-centred Cafe that engenders learning through the art of play.
+                  It is the brainchild of Mrs. Bassey Onwuanaku
+                </strong>{' '}
+                who wandered into and discovered the joy of board gaming in her search for ways to help her first child
+                nurture her kinesthetic approach to learning.
+              </p>
+            </div>
+            <div className="about-header-image">
+              <Image src={BlogImageOne} height={BlogImageOne.height} width={BlogImageOne.width} alt="desc" />
+            </div>
+          </div>
+        </div>
+      </Header>
       <div className="container about-history">
         <p>
           {`The cafe was birthed in September 2013 as a result of her love for children and her desire to share her

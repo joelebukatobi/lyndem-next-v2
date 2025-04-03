@@ -2,6 +2,7 @@
 // Styles
 import '@/main/_assets/styles/main.scss';
 // Components
+import { Navbar } from '@/main/_components/organisms/Navbar';
 import { Footer } from '@/main/_components/organisms/Footer';
 import { Header } from '@/main/_components/organisms/Header';
 import { usePathname } from 'next/navigation';
@@ -29,6 +30,7 @@ export default function Layout({ children }) {
 
   return (
     <div className={`${getPageClass()}`}>
+      <Navbar />
       <Header />
       <div className="">{children}</div>
       <Footer />

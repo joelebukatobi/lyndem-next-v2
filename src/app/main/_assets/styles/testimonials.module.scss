@@ -10,9 +10,10 @@
         //
         @apply flex flex-col w-full transition-transform duration-700;
       }
+
       //
       &-slide {
-        width: 80.86% !important;
+        width: calc(100% - 4rem) !important;
         height: calc(100% - 12rem) !important;
         transition: opacity 0.1s ease-in-out;
         //
@@ -24,6 +25,7 @@
           }
         }
       }
+
       //
       &-main {
         @apply top-0 left-0 absolute bg-white h-full z-[2] w-full pl-[3.2rem] pt-[3.2rem];
@@ -58,6 +60,7 @@
           }
         }
       }
+
       //
       &-pagination {
         @apply flex mt-[8rem] justify-center space-x-[2.4rem];
@@ -70,6 +73,9 @@
         }
       }
       //
+      &-pagination {
+        @apply hidden;
+      }
     }
   }
 

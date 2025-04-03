@@ -7,7 +7,7 @@ button {
   }
   // Button Hover
   &:hover {
-    @apply hover:bg-blue-600  border-blue-600;
+    @apply bg-blue-600  border-blue-600;
   }
   // Button Focus
   &:focus {

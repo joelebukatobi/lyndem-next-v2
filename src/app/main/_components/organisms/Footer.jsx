@@ -56,14 +56,13 @@ export const Footer = () => {
         <div className="footer-address">
           <h5>Our Address</h5>
           <div>
-            <MapPinIcon />
             <address>
               Suite A6, Kabom Court, Plot 104 Gado Nasko Road (2/1) By Phase IV Bridge, Opposite Unity Clinic. Kubwa,
               Abuja
             </address>
           </div>
+          <h5>Call Us On:</h5>
           <div>
-            <DevicePhoneMobileIcon />
             <p>08025182324, 08094931619 </p>
           </div>
         </div>
@@ -80,7 +79,7 @@ export const Footer = () => {
             <p>Your email is safe with us</p>
           </form>
 
-          <h5>Follow Me</h5>
+          <h5>Follow Us</h5>
           <ul>
             <li>
               <TwitterIcon />

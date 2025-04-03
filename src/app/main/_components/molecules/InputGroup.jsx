@@ -4,7 +4,7 @@ import { Label } from '@/main/_components/atoms/Label';
 
 export const InputGroup = ({ name, placeholder, icon, value, type, id, required, label }) => {
   return (
-    <div aria-label="input-group">
+    <div className="input-group">
       <Label htmlFor={id}>{label}</Label>
       <div>
         <Input

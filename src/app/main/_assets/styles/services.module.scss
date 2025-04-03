@@ -1,13 +1,13 @@
 .services {
   &-header {
-    @apply h-[72rem] bg-blue-800 relative  mb-[24rem];
+    @apply h-[64rem] bg-blue-800 relative  mb-[16rem];
     //
     &-main {
-      @apply h-full  relative text-white;
+      @apply h-full  relative text-white flex justify-between items-center;
 
       //
       & .caption {
-        @apply absolute lg:left-[3.2rem] 2xl:left-0 top-[17.4rem] lg:w-[40%] xl:w-[40%];
+        @apply lg:w-[40%] xl:w-[40%];
         //
         & div {
           & p {
@@ -22,7 +22,7 @@
     }
 
     &-image {
-      @apply absolute lg:right-[3.2rem] 2xl:right-0 lg:w-[40%] xl:w-[49.07%] z-[1] border-[1rem] top-[21.8rem] overflow-hidden border-white rounded-[1.6rem] shadow-card;
+      @apply  lg:w-[40%] xl:w-[49.07%] z-[1] border-[1rem]  overflow-hidden border-white rounded-[1.6rem] ;
     }
   }
 

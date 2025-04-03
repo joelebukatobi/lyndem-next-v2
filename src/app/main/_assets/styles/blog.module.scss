@@ -35,13 +35,13 @@
       @apply w-full shadow-card bg-white rounded-[1.6rem];
       //
       &--image {
-        @apply relative w-full h-[40rem] rounded-[1.6rem] overflow-hidden;
+        @apply w-full h-[28rem] rounded-tl-[1.6rem] rounded-tr-[1.6rem] overflow-hidden;
         & img {
           @apply w-full h-full;
         }
       }
       &--details {
-        @apply flex gap-x-[5.6rem] px-[3.2rem] pt-[3.2rem];
+        @apply flex justify-between px-[2.4rem] pt-[1.6rem];
       }
 
       &--author,
@@ -52,19 +52,19 @@
         }
         //
         & svg {
-          @apply h-[2.4rem] w-[2.4rem] fill-blue-600;
+          @apply h-[1.6rem] w-[1.6rem] fill-blue-600;
         }
       }
 
       & figcaption {
-        @apply px-[3.2rem] pt-[2.4rem] pb-[3.2rem];
+        @apply px-[2.4rem] pt-[2.4rem] pb-[3.2rem];
 
         & h5 {
-          @apply font-serif font-bold text-[2rem] mb-[1.6rem];
+          @apply font-serif font-bold text-[2.8rem] mb-[1.6rem];
         }
 
         & p {
-          @apply text-[1.4rem];
+          @apply text-[1.8rem];
           //
           & a {
             @apply text-blue-600 font-semibold;

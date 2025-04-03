@@ -1,10 +1,12 @@
 //
 .wwd {
-  @apply mt-[18rem] mb-[36rem];
+  @apply mt-[18rem] mb-[24rem];
 
   //
-  & h3 {
-    @apply font-serif font-bold text-[4.8rem] w-[70%] mb-[4rem];
+  & .caption {
+    & h3 {
+      @apply font-serif font-bold text-[4.8rem] w-[60%] mb-[4rem];
+    }
   }
 
   //
@@ -13,25 +15,38 @@
   }
   //
   &-card {
-    @apply relative px-[4.8rem] pt-[8rem] pb-[4.8rem] flex flex-col rounded-[1.6rem];
-    width: calc(33.3333% - 1.6rem);
+    @apply relative  flex flex-col rounded-[1.6rem] h-full shadow-card border-[.1rem] border-gray-100 bg-white;
+    width: calc(100% - 1.6rem);
   }
 
   &-image {
-    @apply absolute top-0 left-0 w-full h-full z-[-1];
+    @apply w-full h-full;
+
+    & img {
+      @apply rounded-tl-[1.6rem] rounded-tr-[1.6rem];
+    }
   }
 
   &-content {
+    @apply flex flex-col justify-center h-[100%] p-[2.4rem];
     & h4 {
-      @apply text-[2.8rem] font-bold mb-[1.6rem] text-white;
+      @apply font-serif text-[2.8rem] font-bold;
+    }
+
+    & hr {
+      @apply border-none h-[.2rem] bg-orange-600 my-[1.6rem];
     }
 
     & p {
-      @apply text-[1.6rem]  mb-[4rem] text-white;
+      @apply text-[2rem] mb-[2.4rem];
     }
 
     & button {
-      @apply bg-white text-black w-[unset] px-[3.2rem];
+      @apply w-[unset] px-[3.2rem];
+
+      &:hover {
+        @apply text-black bg-transparent;
+      }
     }
   }
 }

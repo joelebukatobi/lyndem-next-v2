@@ -1,4 +1,4 @@
 //
 export const FormGroup = ({ children }) => {
-  return <div aria-label="form-group">{children}</div>;
+  return <div className="form-group">{children}</div>;
 };

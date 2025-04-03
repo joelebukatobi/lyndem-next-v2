@@ -56,7 +56,7 @@
       @apply flex items-start gap-x-[.8rem] mb-[1.6rem];
 
       & svg {
-        @apply h-[2.4rem] w-[2.4rem] stroke-blue-800;
+        @apply h-[2.4rem] w-[2.4rem] stroke-blue-800 mt-[.2rem];
       }
       //
       & p {
@@ -70,6 +70,12 @@
       & p,
       & address {
         width: calc(100% - 2.4rem);
+      }
+    }
+
+    & h5 {
+      &:last-of-type {
+        @apply mb-[.8rem];
       }
     }
   }

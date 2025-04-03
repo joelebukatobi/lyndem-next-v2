@@ -37,7 +37,8 @@ export const Testimonials = () => {
         "slidesQty": {
           "xs": 1,
           "lg": 1
-        }
+        },
+        "isInfiniteLoop": true
       }'
       >
         <div className="row">
@@ -72,26 +73,6 @@ export const Testimonials = () => {
                       zIndex: isActive ? 2 : 1,
                     }}
                   >
-                    {/* Main Content */}
-                    <div className="hs-carousel-after">
-                      <div className="testimonials-image">
-                        <Image
-                          src={TestimonialImageOne}
-                          height={TestimonialImageOne.height}
-                          width={TestimonialImageOne.width}
-                          alt="Testimonial Image"
-                        />
-                      </div>
-                      <div className="testimonials-content">
-                        <blockquote>{testimonials[nextIndex].text}</blockquote>
-                        <footer>
-                          <h5>{testimonials[nextIndex].author}</h5>
-                          <p>{testimonials[nextIndex].location}</p>
-                        </footer>
-                      </div>
-                    </div>
-
-                    {/* After Content */}
                     {isActive && (
                       <div className="hs-carousel-main">
                         <div className="testimonials-image">

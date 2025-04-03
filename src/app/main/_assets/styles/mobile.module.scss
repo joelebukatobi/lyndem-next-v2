@@ -1,12 +1,20 @@
 // Grid
-//
+
+//Container
 .container {
   @media (max-width: 768px) {
-    @apply px-[5.6rem];
+    @apply px-[2.4rem];
+  }
+  @media (min-width: 768px) {
+    @apply md:px-[5.6rem] lg:px-[3.2rem] 2xl:px-0;
   }
 }
-//
+
+//Row
 .row {
+  @media (max-width: 768px) {
+    @apply flex-col;
+  }
   @media (min-width: 768px) and (max-width: 1024px) {
     @apply flex-wrap;
   }
@@ -20,20 +28,42 @@
 
 // Molecules
 /*-----------------------------------*/
+
 // Captions
 .caption {
-  @media (max-width: 768px) {
+  @media (max-width: 576px) {
     & div {
       & p {
         @apply text-[1.6rem];
       }
     }
+
+    & h3 {
+      @apply text-[3.2rem];
+    }
+
+    & p {
+      @apply text-[2rem];
+    }
+
+    & button {
+      @apply hidden;
+    }
+  }
+
+  @media (min-width: 576px) and (max-width: 768px) {
+    & div {
+      & p {
+        @apply text-[1.6rem];
+      }
+    }
+
     & h3 {
       @apply text-[4.8rem];
     }
 
     & p {
-      @apply text-[2rem];
+      @apply text-[2.4rem];
     }
 
     & button {
@@ -45,21 +75,46 @@
 // Sections
 .section {
   @media (max-width: 768px) {
-    @apply flex-col;
+    @apply flex-col my-[12.8rem] gap-y-[4rem];
 
     &-text {
       @apply w-full;
     }
 
     &-media {
-      @apply w-full mt-[6.4rem];
+      @apply w-full;
     }
   }
 }
 
+// Organisms
+/*-----------------------------------*/
+
 // Testimonials
 .testimonials {
-  @media (max-width: 768px) {
+  @media (max-width: 576px) {
+    & .caption {
+      @apply w-full;
+    }
+
+    .hs {
+      &-carousel {
+        @apply w-full h-[48rem];
+        //
+        &-body {
+          transform: none !important;
+        }
+
+        //
+        &-slide {
+          top: 0 !important;
+        }
+      }
+    }
+  }
+
+  //
+  @media (min-width: 576px) and (max-width: 768px) {
     & .caption {
       @apply w-full;
     }
@@ -67,88 +122,76 @@
     & .hs {
       &-carousel {
         @apply w-full mt-[2rem] mb-[4rem];
+      }
+    }
 
-        &-pagination {
-          @apply absolute bottom-0;
-        }
+    &-content {
+      & blockquote {
+        @apply text-[2.4rem];
       }
     }
   }
 }
 
-// What We Do
+//What We Do
 .wwd {
+  @media (max-width: 576px) {
+    @apply mb-[18rem];
+    //
+    & .row {
+      @apply gap-y-[4rem];
+    }
+
+    & .caption {
+      & h3 {
+        @apply w-full text-[3.2rem];
+      }
+    }
+  }
+
   //
-  @media (min-width: 768px) and (max-width: 1024px) {
+  @media (min-width: 576px) and (max-width: 768px) {
+    //
+    & .row {
+      @apply gap-y-[4rem];
+    }
+
     & .caption {
       & h3 {
         @apply w-full;
       }
     }
-    & .row {
-      @apply w-full  gap-x-[1.6rem] gap-y-[3.2rem];
-    }
+
     //
     &-card {
-      width: calc(50% - 0.8rem);
-      @apply p-0 justify-center;
+      width: calc(100% - 1.6rem);
     }
-    //
-    &-image {
-      @apply relative w-full;
-      & img {
-        @apply w-full h-full;
-      }
-    }
+
     //
     &-content {
-      @apply absolute flex flex-col justify-center p-[1.6rem];
-
       & h4 {
-        @apply text-[2.4rem] mb-[.8rem] text-white;
+        @apply text-[2.8rem];
       }
 
       & p {
-        @apply text-[2rem] mb-[1.6rem] text-white;
-      }
-
-      & button {
-        @apply hidden;
+        @apply text-[2.4rem];
       }
     }
   }
+
   //
-  @media (min-width: 1025px) and (max-width: 1280px) {
+  @media (min-width: 769px) and (max-width: 1024px) {
     &-card {
-      @apply p-[2.4rem];
-    }
-
-    //
-    &-content {
-      & h4 {
-        @apply mb-[.8rem];
-      }
-
-      //
-      & p {
-        @apply mb-[2.4rem];
-      }
-
-      //
-      & button {
-        @apply text-[1.4rem] h-[4rem];
-      }
+      width: calc(50% - 1.6rem);
+      @apply mb-[3.2rem];
     }
   }
 }
 
-// Organisms
-/*-----------------------------------*/
 // Navbar
 .navbar {
-  @media (max-width: 768px) {
-  }
 }
+
 // Footer
 .footer {
   @media (max-width: 768px) {
@@ -157,7 +200,7 @@
     }
     //
     &-logo {
-      @apply h-[24rem] w-[24rem];
+      @apply hidden h-[24rem] w-[24rem];
 
       & svg {
         @apply h-[24rem] w-[24rem];
@@ -190,18 +233,31 @@
             @apply text-[2rem];
           }
         }
+
+        & h5 {
+          &:last-of-type {
+            @apply mt-[6.4rem];
+          }
+        }
       }
     }
 
     //
     &-address {
-      @apply space-y-[4rem];
       //
       & div {
+        //
+        @apply mb-[2.4rem];
         //
         & p,
         & address {
           @apply text-[2rem];
+        }
+      }
+      //
+      & h5 {
+        &:last-of-type {
+          @apply mb-[2.4rem];
         }
       }
     }
@@ -216,20 +272,56 @@
 /*-----------------------------------*/
 // Landing Page and Components
 .landing {
-  @media (min-width: 768px) and (max-width: 1024px) {
-    &-header {
-      &-image {
-        & img {
-          &:first-of-type {
-            @apply hidden;
-          }
+  //
+  @media (max-width: 768px) {
+    //
 
-          &:last-of-type {
-            @apply block;
-          }
-        }
+    &-text {
+      @apply w-full;
+
+      & h1 {
+        @apply text-[7.2rem] w-full mb-[2.4rem] text-left;
       }
 
+      & h4 {
+        @apply text-[3.2rem] mb-[1.6rem] text-left;
+      }
+
+      & img {
+        @apply w-full mb-[4rem];
+      }
+
+      & button {
+        @apply hidden;
+      }
+    }
+
+    &-image {
+      @apply hidden;
+    }
+
+    &-about {
+      & section {
+        @apply flex-col-reverse;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    &-text {
+      & h1 {
+        @apply text-[4.8rem];
+      }
+
+      & h4 {
+        @apply text-[2rem];
+      }
+    }
+  }
+
+  //
+  @media (min-width: 768px) and (max-width: 1024px) {
+    &-header {
       &-content {
         @apply mt-0 px-[5.6rem] pb-[8rem];
 
@@ -245,32 +337,17 @@
           @apply mt-[1.6rem];
         }
       }
-
-      & .navbar {
-        &-list {
-          & ul {
-            background: rgba(255, 255, 255, 0.1);
-            /* Apply the blur effect */
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(100px); /* For Safari compatibility */
-          }
-        }
-
-        &-menu {
-          & button {
-            @apply border-none hover:border-none;
-          }
-        }
-      }
     }
   }
 
   //
   @media (min-width: 1024px) and (max-width: 1280px) {
     &-header {
-      @apply h-[75vh];
       //
       &-content {
+        @apply h-[64rem];
+
+        //
         & h4 {
           @apply w-[75%];
         }
@@ -298,10 +375,10 @@
 .about {
   @media (max-width: 768px) {
     &-header {
-      @apply mb-[40rem];
+      @apply mb-[8rem];
       //
       &-main {
-        @apply px-[5.6rem] pt-[4rem];
+        @apply flex-col justify-center h-full;
         //
         & .caption {
           @apply relative top-[unset] left-[unset] w-full px-0;
@@ -313,7 +390,7 @@
       }
 
       &-image {
-        @apply relative top-[unset] left-[unset] w-full h-[unset] mt-[8rem] overflow-hidden;
+        @apply hidden;
 
         & img {
           @apply w-full;
@@ -323,22 +400,30 @@
   }
 }
 
-// Settigns Page
+// Services Page
 .services {
   @media (max-width: 768px) {
     &-header {
-      @apply mb-[48rem];
+      @apply mb-[0rem];
+
+      //
+      &-main {
+        @apply flex-col justify-center h-full;
+      }
       //
       & .caption {
         @apply pt-[8rem] mb-[4rem] relative  top-[unset] left-[unset];
       }
 
       &-image {
-        @apply relative top-[unset] left-[unset];
+        @apply hidden;
       }
     }
 
     &-section {
+      //
+      @apply my-[8rem];
+      //
       & .row {
         @apply flex-col;
       }
@@ -381,6 +466,17 @@
 
 // Blog Page and Components
 .blog {
+  @media (max-width: 480px) {
+    &-landing {
+      &-card {
+        &--details {
+          @apply hidden;
+        }
+      }
+    }
+  }
+
+  //
   @media (max-width: 768px) {
     &-landing {
       & header {
@@ -388,6 +484,7 @@
           @apply mt-[2.4rem];
         }
       }
+      //
       &-card {
         @apply w-full;
 
@@ -416,7 +513,11 @@
 
       & .hs-carousel {
         &-body {
-          @apply gap-x-[0] mx-auto;
+          transform: none !important;
+        }
+
+        &-slide {
+          top: 0 !important;
         }
       }
     }

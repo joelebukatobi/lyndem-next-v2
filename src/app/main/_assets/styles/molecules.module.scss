@@ -1,5 +1,7 @@
 // Input Group
-div[aria-label='input-group'] {
+.input-group {
+  @apply w-full;
+  //
   & label {
     @apply capitalize mb-[.4rem];
   }
@@ -24,13 +26,22 @@ div[aria-label='input-group'] {
   }
 }
 // Button Group
-div[aria-label='button-group'] {
+.button-group {
   @apply flex space-x-[1.6rem];
 }
 
 // Form Group
-form[aria-label='form-group'] {
-  @apply flex space-x-[1.6rem];
+.form-group {
+  @apply w-full flex space-x-[1.6rem];
+}
+
+// Textarea Group
+.textarea-group {
+  @apply w-full flex flex-col;
+
+  & label {
+    @apply capitalize mb-[.4rem];
+  }
 }
 
 // Caption

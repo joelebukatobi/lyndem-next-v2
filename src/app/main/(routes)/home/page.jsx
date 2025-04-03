@@ -9,6 +9,7 @@ import { SectionMedia } from '@/main/_components/molecules/SectionMedia';
 import { SectionText } from '@/main/_components/molecules/SectionText';
 import { BlogCard } from '@/main/_components/organisms/BlogCard';
 import { Testimonials } from '@/main/_components/organisms/Testimonials';
+import { Header } from '@/main/_components/organisms/Header';
 
 // Image
 import LandingAboutImage from '@/main/_assets/images/landing-about-image.png';
@@ -17,6 +18,8 @@ import EduGamingCafe from '@/main/_assets/images/edugaming-cafe-image.png';
 import GameSchooling from '@/main/_assets/images/game-schooling-image.png';
 import PlayDates from '@/main/_assets/images/play-dates-image.png';
 import BlogCardImage from '@/main/_assets/images/blog-image-one.png';
+import LandingHeaderImage from '@/main/_assets/images/landing-header-image.png';
+import LandingGallery from '@/main/_assets/images/landing-gallery.png';
 
 // Icons
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
@@ -25,6 +28,28 @@ export default function Home() {
   //
   return (
     <>
+      <Header className="landing">
+        <div className="container ">
+          <div className="landing-header">
+            <div className="landing-content">
+              <section className="landing-text ">
+                <Image src={LandingHeaderImage} alt="Landing Header Image" />
+                <div>
+                  <h1>Lyndem Edutainment</h1>
+                  <h4>
+                    Is an educational service provider that engenders learning through the art of interactive play using
+                    educational games and activities
+                  </h4>
+                  <Button>What We Do</Button>
+                </div>
+              </section>
+              <div className="landing-image">
+                <Image src={LandingGallery} alt="Landing Gallery" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </Header>
       {/* Landing | About Us */}
       <div className="landing-about">
         <SectionContent>
@@ -66,6 +91,7 @@ export default function Home() {
             </div>
             <div className="wwd-content">
               <h4>EduGaming Cafe</h4>
+              <hr />
               <p>
                 Our Educational Games Cafe affords kids the opportunity to interact with board, card, and electronic
                 educational games and also like minded peers.
@@ -79,6 +105,7 @@ export default function Home() {
             </div>
             <div className="wwd-content">
               <h4>Gaming School</h4>
+              <hr />
               <p>
                 {`One of our services on offer is Game Schooling which incorporates games into school lessons. We're open
                 to partnering with schools and organizations
@@ -93,6 +120,7 @@ export default function Home() {
             </div>
             <div className="wwd-content">
               <h4>Play Dates</h4>
+              <hr />
               <p>
                 Play Dates are fun interaction sessions where kids bond with one another over educational games which
                 can be customized according to clients needs.
@@ -105,17 +133,19 @@ export default function Home() {
 
       <Testimonials />
 
-      {/* Landinf | Blog */}
+      {/* Landing | Blog */}
       <div className="container blog">
         <div
           className="blog-landing"
           data-hs-carousel='{
             "loadingClasses": "opacity-0", 
             "slidesQty": {
-              "sm": 1,
+              "xs": 1,
+              "md": 2,
               "lg": 2,
               "xl": 3
-            }
+            },
+            "isInfiniteLoop": true
           }'
         >
           <header className="row">
